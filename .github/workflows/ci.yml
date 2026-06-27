@@ -23,3 +23,6 @@ jobs:
 
       - name: Build
         run: dotnet build TaskTracker.Api/TaskTracker.Api.csproj --no-restore
+
+      - name: Build Docker image
+        run: docker build -t tasktracker-api ./TaskTracker.Api
